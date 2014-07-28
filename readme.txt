@@ -3,7 +3,7 @@ Contributors: smartware.cc
 Tags: page, 404, error, error page, 404 page, page not found, page not found error, 404 error page
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,10 @@ The go to 'Settings' -> '404 Error Page' from your WordPress Dashbord and select
 
 * English
 * German
+* Spanish (thanks to [Gaston](http://www.cosademandinga.com.ar/))
+* Serbo-Croatian (thanks to [Borisa](http://www.webhostinghub.com/))	
+
+**Translations welcome!** Please send your translation to [sw@smartware.cc](mailto:sw@smartware.cc)
 
 = More Information =
 
@@ -36,6 +40,10 @@ Visit the [Plugin Homepage](http://smartware.cc/wp-404page)
 2. Define the created Page as 404 Error Page
 
 == Changelog ==
+
+= 1.2 (2014-07-28) =
+* Spanish translation
+* Serbo-Croatian translation
 
 = 1.1 (2014-06-03) =
 * Multilingual support added

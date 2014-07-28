@@ -3,7 +3,7 @@
 Plugin Name: 404page
 Plugin URI: http://smartware.cc/wp-404page
 Description: Define any of your pages as 404 page
-Version: 1.1
+Version: 1.2
 Author: smartware.cc
 Author URI: http://smartware.cc
 License: GPL2

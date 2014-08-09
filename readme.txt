@@ -11,7 +11,7 @@ Define any of your WordPress pages as 404 error page
 
 == Description ==
 
-> Create your 404 Page as a normal WordPress Page using the full power of WordPress. You can use a Custom Page Template or Custom Fields, you can set a Featured Image - everything like on every other Page.>
+> Create your 404 Page as a normal WordPress Page using the full power of WordPress. You can use a Custom Page Template or Custom Fields, you can set a Featured Image - everything like on every other Page.
 
 The go to 'Settings' -> '404 Error Page' from your WordPress Dashbord and select the created Page as your 404 error page.
 

@@ -31,7 +31,7 @@ Create your 404 Page as a normal WordPress Page using the full power of WordPres
 
 = Do you like the 404page Plugin? =
 
-Thanks, I appreciate that. You don’t need to make a donation. No money, no beer, no coffee. Please, just [tell the world that you like what I’m doing](http://smartware.cc/make-a-donation/)! And that’s all.
+Thanks, I appreciate that. You donâ€™t need to make a donation. No money, no beer, no coffee. Please, just [tell the world that you like what Iâ€™m doing](http://smartware.cc/make-a-donation/)! And thatâ€™s all.
 
 = More plugins from smartware.cc =
 

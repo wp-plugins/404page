@@ -12,9 +12,13 @@ Define any of your WordPress pages as 404 error page
 
 == Description ==
 
-> Create your 404 Page as a normal WordPress Page using the full power of WordPress. You can use a Custom Page Template or Custom Fields, you can set a Featured Image - everything like on every other Page.
+> Create your 404 Error Page using the full Power of WordPress
 
-The go to 'Settings' -> '404 Error Page' from your WordPress Dashbord and select the created Page as your 404 error page.
+**See also [Plugin Homepage](http://smartware.cc/free-wordpress-plugins/404page/)**
+
+https://www.youtube.com/watch?v=VTL07Lf0IsY
+
+Create your 404 Page as a normal WordPress Page using the full power of WordPress. You can use a Custom Page Template or Custom Fields, you can set a Featured Image - everything like on every other Page. Then go to 'Settings' -> '404 Error Page' from your WordPress Dashbord and select the created Page as your 404 error page.
 
 = Languages =
 
@@ -23,13 +27,19 @@ The go to 'Settings' -> '404 Error Page' from your WordPress Dashbord and select
 * Spanish (thanks to [Gaston](http://cosa-de-mandinga.blogspot.de/))
 * Serbo-Croatian (thanks to [Borisa](http://www.webhostinghub.com/))	
 
-https://www.youtube.com/watch?v=VTL07Lf0IsY
-
 **Translations welcome!** Please [contact Author](http://smartware.cc/contact) if you would like to do a translation.
 
-= More Information =
+= Do you like the 404page Plugin? =
 
-Visit the [Plugin Homepage](http://smartware.cc/free-wordpress-plugins/404page/)
+Thanks, I appreciate that. You don’t need to make a donation. No money, no beer, no coffee. Please, just [tell the world that you like what I’m doing](http://smartware.cc/make-a-donation/)! And that’s all.
+
+= More plugins from smartware.cc =
+
+* **[link-log](https://wordpress.org/plugins/link-log/)** - Find out where your visitors leave to. Track clicks on external links. 
+* **[smart Archive Page Remove](https://wordpress.org/plugins/smart-archive-page-remove/)** - Completely remove unwated Archive Pages from your Blog 
+* **[smart User Slug Hider](https://wordpress.org/plugins/smart-user-slug-hider/)** - Hide usernames in author pages URLs to enhance security 
+* **[hashtagger](https://wordpress.org/plugins/hashtagger/)** Tag your posts by using #hashtags
+* **[JavaScript AutoLoader](https://wordpress.org/plugins/javascript-autoloader/)** - Load JavaScript files without changing files in the theme directory or installing several plugins to add all the desired functionality 
 
 == Installation ==
 

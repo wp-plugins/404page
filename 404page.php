@@ -168,8 +168,8 @@ class Smart404Page {
           <h3><span><?php _e( 'Like this Plugin?', '404page_general' ); ?></span></h3>
           <div class="inside">
             <ul>
-              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/extend/plugins/hashtagger/"><?php _e( 'Please rate the plugin', '404page_general' ); ?></a></li>
-              <li><div class="dashicons dashicons-admin-home"></div>&nbsp;&nbsp;<a href="http://smartware.cc/wp-hashtagger/"><?php _e( 'Plugin homepage', '404page_general'); ?></a></li>
+              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/extend/plugins/404page/"><?php _e( 'Please rate the plugin', '404page_general' ); ?></a></li>
+              <li><div class="dashicons dashicons-admin-home"></div>&nbsp;&nbsp;<a href="http://smartware.cc/free-wordpress-plugins/404page/"><?php _e( 'Plugin homepage', '404page_general'); ?></a></li>
               <li><div class="dashicons dashicons-admin-home"></div>&nbsp;&nbsp;<a href="http://smartware.cc/"><?php _e( 'Author homepage', '404page_general' );?></a></li>
               <li><div class="dashicons dashicons-googleplus"></div>&nbsp;&nbsp;<a href="https://plus.google.com/+SmartwareCc"><?php _e( 'Authors Google+ Page', '404page_general' ); ?></a></li>
               <li><div class="dashicons dashicons-facebook-alt"></div>&nbsp;&nbsp;<a href="https://www.facebook.com/smartware.cc"><?php _e( 'Authors facebook Page', '404page_general' ); ?></a></li>
@@ -180,8 +180,8 @@ class Smart404Page {
           <h3><span><?php _e( 'Need help?', '404page_general' ); ?></span></h3>
           <div class="inside">
             <ul>
-              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/plugins/hashtagger/faq/"><?php _e( 'Take a look at the FAQ section', '404page_general' ); ?></a></li>
-              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/support/plugin/hashtagger"><?php _e( 'Take a look at the Support section', '404page_general'); ?></a></li>
+              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/plugins/404page/faq/"><?php _e( 'Take a look at the FAQ section', '404page_general' ); ?></a></li>
+              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/support/plugin/404page/"><?php _e( 'Take a look at the Support section', '404page_general'); ?></a></li>
               <li><div class="dashicons dashicons-admin-comments"></div>&nbsp;&nbsp;<a href="http://smartware.cc/contact/"><?php _e( 'Feel free to contact the Author', '404page_general' ); ?></a></li>
             </ul>
           </div>

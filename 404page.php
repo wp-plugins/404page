@@ -2,14 +2,14 @@
 /*
 Plugin Name: 404page
 Plugin URI: http://smartware.cc/free-wordpress-plugins/404page/
-Description: Define any of your pages as 404 page
-Version: 1.3
+Description: Custom 404 the easy way! Set any page as custom 404 error page. No coding needed. Works with every Theme.
+Version: 1.4
 Author: smartware.cc
 Author URI: http://smartware.cc
 License: GPL2
 */
 
-/*  Copyright 2013-2014  smartware.cc  (email : sw@smartware.cc)
+/*  Copyright 2013-2015  smartware.cc  (email : sw@smartware.cc)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -31,12 +31,14 @@ if ( ! defined( 'WPINC' ) ) {
 
 class Smart404Page {
   public $plugin_name;
+  public $plugin_slug;
   public $version;
   public $settings;
   
 	public function __construct() {
 		$this->plugin_name = '404page';
-		$this->version = '1.3';
+    $this->plugin_slug = '404page';
+		$this->version = '1.4';
     $this->get_settings();
     $this->init();
 	} 
@@ -94,12 +96,18 @@ class Smart404Page {
   
   // echo title for settings section
   function admin_section_title() {
-    echo '<p><strong>' . __( 'Settings' ) . ':</strong></p><hr />';
+    echo '<p><strong>' . __( 'Settings' ) . '</strong>&nbsp;<a class="dashicons dashicons-editor-help" href="http://smartware.cc/docs/404page/"></a></p><hr />';
   }
   
   // adds the options page to admin menu
   function admin_menu() {
-    add_options_page( __( '404 Error Page', "404page" ), __( '404 Error Page', '404page' ), 'manage_options', '404pagesettings', array( $this, 'admin_page' ) );
+    $page_handle = add_options_page( __( '404 Error Page', "404page" ), __( '404 Error Page', '404page' ), 'manage_options', '404pagesettings', array( $this, 'admin_page' ) );
+    add_action( 'admin_print_scripts-' . $page_handle, array( $this, 'admin_js' ) );
+  }
+  
+  // adds javascript to the 404page settings page
+  function admin_js() {
+    wp_enqueue_script( '404pagejs', plugins_url( '/404page.js', __FILE__ ), 'jquery', $this->version, true );
   }
  
   // creates the options page
@@ -128,6 +136,9 @@ class Smart404Page {
                       do_settings_sections( '404page_settings_section' );
                       submit_button(); 
                     ?>
+                    <p class="submit"><input type="button" name="edit_404_page" id="edit_404_page" class="button secondary" value="<?php _e( 'Edit Page', '404page' ); ?>"></p>
+                    <div id="404page_current_value" style="display: none"><?php echo $this->get_404page_id(); ?></div>
+                    <div id="404page_edit_link" style="display: none"><?php echo get_edit_post_link( $this->get_404page_id() ); ?></div>
                   </div>
                 </div>
               </form>
@@ -168,11 +179,11 @@ class Smart404Page {
           <h3><span><?php _e( 'Like this Plugin?', '404page_general' ); ?></span></h3>
           <div class="inside">
             <ul>
-              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/extend/plugins/404page/"><?php _e( 'Please rate the plugin', '404page_general' ); ?></a></li>
-              <li><div class="dashicons dashicons-admin-home"></div>&nbsp;&nbsp;<a href="http://smartware.cc/free-wordpress-plugins/404page/"><?php _e( 'Plugin homepage', '404page_general'); ?></a></li>
+              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="https://wordpress.org/plugins/<?php echo $this->plugin_slug; ?>/"><?php _e( 'Please rate the plugin', '404page_general' ); ?></a></li>
+              <li><div class="dashicons dashicons-admin-home"></div>&nbsp;&nbsp;<a href="http://smartware.cc/free-wordpress-plugins/<?php echo $this->plugin_slug; ?>/"><?php _e( 'Plugin homepage', '404page_general'); ?></a></li>
               <li><div class="dashicons dashicons-admin-home"></div>&nbsp;&nbsp;<a href="http://smartware.cc/"><?php _e( 'Author homepage', '404page_general' );?></a></li>
-              <li><div class="dashicons dashicons-googleplus"></div>&nbsp;&nbsp;<a href="https://plus.google.com/+SmartwareCc"><?php _e( 'Authors Google+ Page', '404page_general' ); ?></a></li>
-              <li><div class="dashicons dashicons-facebook-alt"></div>&nbsp;&nbsp;<a href="https://www.facebook.com/smartware.cc"><?php _e( 'Authors facebook Page', '404page_general' ); ?></a></li>
+              <li><div class="dashicons dashicons-googleplus"></div>&nbsp;&nbsp;<a href="http://g.smartware.cc/"><?php _e( 'Authors Google+ Page', '404page_general' ); ?></a></li>
+              <li><div class="dashicons dashicons-facebook-alt"></div>&nbsp;&nbsp;<a href="http://f.smartware.cc/"><?php _e( 'Authors facebook Page', '404page_general' ); ?></a></li>
             </ul>
           </div>
         </div>
@@ -180,8 +191,9 @@ class Smart404Page {
           <h3><span><?php _e( 'Need help?', '404page_general' ); ?></span></h3>
           <div class="inside">
             <ul>
-              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/plugins/404page/faq/"><?php _e( 'Take a look at the FAQ section', '404page_general' ); ?></a></li>
-              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/support/plugin/404page/"><?php _e( 'Take a look at the Support section', '404page_general'); ?></a></li>
+              <li><div class="dashicons dashicons-book-alt"></div>&nbsp;&nbsp;<a href="http://smartware.cc/docs/<?php echo $this->plugin_slug; ?>/"><?php _e( 'Take a look at the Plugin Doc', '404page_general' ); ?></a></li>
+              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/plugins/<?php echo $this->plugin_slug; ?>/faq/"><?php _e( 'Take a look at the FAQ section', '404page_general' ); ?></a></li>
+              <li><div class="dashicons dashicons-wordpress"></div>&nbsp;&nbsp;<a href="http://wordpress.org/support/plugin/<?php echo $this->plugin_slug; ?>/"><?php _e( 'Take a look at the Support section', '404page_general'); ?></a></li>
               <li><div class="dashicons dashicons-admin-comments"></div>&nbsp;&nbsp;<a href="http://smartware.cc/contact/"><?php _e( 'Feel free to contact the Author', '404page_general' ); ?></a></li>
             </ul>
           </div>
